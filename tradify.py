@@ -35,7 +35,7 @@ def convText(file,sim,verbose):
 def convEpub(file,sim,verbose):
     if(verbose):
         print(file)
-    ext=['.ncx',".xhtml",".html",".opt",".ncx"]
+    ext=['.ncx',".htm",".xhtml",".html",".opt",".ncx"]
     zin=ZipFile(file,"r")
     update_contant=[((zipinfo.filename,__conv__(zipinfo.filename,zin.read(zipinfo.filename),sim))) \
             for zipinfo in zin.filelist if zipinfo.filename.endswith(tuple(ext))]
